@@ -1,0 +1,7 @@
+{
+  "desc": "晓得伐，侬晓得噶事情伐。阿拉晓得拉。",
+  "rules": [{
+    "action": "disallow",
+    "page": "pages/my/my"
+  }]
+}

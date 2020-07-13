@@ -1,0 +1,61 @@
+<!--列表-->
+<view class="container" wx:for="{{topicList}}" wx:key="topic_id">
+  <navigator  url="../topicdetail/topicdetail?id={{item.topic_id}}&is_read={{item.is_read}}" class="item-list">
+    <view class="item-title">
+      <image src="{{item.circle_img}}" class="item-circle-img"></image>
+      <view class="item-title-lable">
+        <text class="item-circle-name">{{item.circle_name}}</text>
+        <text class="item-circle-source">{{item.created_time}} 来自：{{item.user_remarks_name}}</text>
+      </view>
+    </view>
+    <view class="item-content">{{item.topic_content}}</view>
+    <view >
+      <block wx:for="{{item.image_list}}" wx:for-item="item1" wx:for-index="index1" wx:key="file_name">
+      <block wx:if="{{item.image_cnt==1}}">
+        <image mode="widthFix" data-src="{{item1.file_src}}" src="{{item1.file_src}}"  class="item-img1" catchtap="previewImage"></image>
+      </block>
+      <block wx:elif="{{item.image_cnt==2}}">
+        <image mode="widthFix" data-src="{{item1.file_src}}" src="{{item1.file_src}}"  class="item-img2" catchtap="previewImage"></image>
+      </block>
+      <block wx:else>
+        <image mode="widthFix" data-src="{{item1.file_src}}" src="{{item1.file_src}}"  class="item-img3" catchtap="previewImage"></image>
+      </block>
+      </block>
+    </view>
+    <block wx:for="{{item.file_list}}" wx:for-item="item1" wx:for-index="index1" wx:key="file_name">
+        <view class="item-file">
+          <block wx:if="{{item1.file_extension=='txt'}}">
+            <image class="item-file-icon" src="../../img/txt.png"></image>
+          </block>
+          <block wx:elif="{{item1.file_extension=='pdf'}}">
+            <image class="item-file-icon" src="../../img/pdf.png"></image>
+          </block>
+          <block wx:elif="{{item1.file_extension=='doc' || item1.file_extension=='docx'}}">
+            <image class="item-file-icon" src="../../img/word.png"></image>
+          </block>
+          <block wx:else>
+            <image class="item-file-icon" src="../../img/excel.png"></image>
+          </block>
+          <view class="item-file-lable" data-url="{{item1.file_src}}" data-type="{{item1.file_extension}}" catchtap="downloadFile" >{{item1.file_name}}</view>
+        </view>
+        
+    </block>
+    <view class="item-bottom">
+      <view class="read-num">{{item.read_cnt}}人已晓得</view>
+      <view class="btn-read">
+      <block wx:if="{{item.is_read == 'Y'}}">
+        <image src="../../img/xiaode.png" data-id="{{item.topic_id}}" data-index="{{index}}" catchtap="btn_readtopic"></image>
+      </block>
+      <block wx:else>
+        <image src="../../img/xiaode_blue.png" data-id="{{item.topic_id}}" data-index="{{index}}" catchtap="btn_readtopic"></image>
+      </block>    
+      </view>
+    </view>
+  </navigator> 
+</view>
+
+
+<!-- 底部添加 -->
+<view class="add-topic" hover-class="plus-hover" bindtap="nav_addtopic">
+  <image src="../../img/btn_add_topic.png"></image>
+</view>

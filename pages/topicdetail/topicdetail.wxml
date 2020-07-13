@@ -1,0 +1,55 @@
+<!--列表-->
+<view class="container">
+  <view class="item-content">
+    <view class="item-title">
+      <image src="{{topicInfo.circle_img}}" class="item-circle-img"></image>
+      <view class="item-title-lable">
+        <text class="item-circle-name">{{topicInfo.circle_name}}</text>
+        <text class="item-circle-source">{{topicInfo.created_time}} 来自：{{topicInfo.user_remarks_name}}</text>
+      </view>
+    </view>
+    <view class="item-content">{{topicInfo.topic_content}}</view>
+    <view >
+      <block wx:for="{{topicInfo.image_list}}" wx:for-item="item1" wx:for-index="index1" wx:key="file_name">
+      <block wx:if="{{topicInfo.image_cnt}}==1">
+        <image mode="widthFix" data-src="{{item1.file_src}}" src="{{item1.file_src}}"  class="item-img1" bindtap="previewImage"></image>
+      </block>
+      <block wx:elif="{{topicInfo.image_cnt}}==2">
+        <image mode="widthFix" data-src="{{item1.file_src}}" src="{{item1.file_src}}"  class="item-img2" bindtap="previewImage"></image>
+      </block>
+      <block wx:else>
+        <image mode="widthFix" data-src="{{item1.file_src}}" src="{{item1.file_src}}"  class="item-img3" bindtap="previewImage"></image>
+      </block>
+      </block>
+    </view>
+    <block wx:for="{{topicInfo.file_list}}" wx:for-item="item1" wx:for-index="index1" wx:key="file_name">
+        <view class="item-file">
+          <block wx:if="{{item1.file_extension=='txt'}}">
+            <image class="item-file-icon" src="../../img/txt.png"></image>
+          </block>
+          <block wx:elif="{{item1.file_extension=='pdf'}}">
+            <image class="item-file-icon" src="../../img/pdf.png"></image>
+          </block>
+          <block wx:elif="{{item1.file_extension=='doc' || item1.file_extension=='docx'}}">
+            <image class="item-file-icon" src="../../img/word.png"></image>
+          </block>
+          <block wx:else>
+            <image class="item-file-icon" src="../../img/excel.png"></image>
+          </block>
+          <view class="item-file-lable" data-url="{{item1.file_src}}" data-type="{{item1.file_extension}}" bindtap="downloadFile" >{{item1.file_name}}</view>
+        </view>
+        
+    </block>
+    <block wx:if="{{topicInfo.is_master == 'N'}}">
+    <view class="item-read">
+      <view class="read-num">{{topicInfo.read_cnt}}人已晓得</view>
+    </view>
+    </block>
+    <block wx:else>
+     <view class="item-bottom" >
+        <navigator class="read_list" url="../readlist/readlist?id={{topicID}}">已读人群({{topicInfo.read_cnt}})</navigator>
+        <navigator class="noread_list" url="../noreadlist/noreadlist?id={{topicID}}">未读人群({{topicInfo.noread_cnt}})</navigator>
+      </view>
+    </block>
+  </view> 
+</view>

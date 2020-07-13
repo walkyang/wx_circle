@@ -1,0 +1,35 @@
+.allProject-body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.allProject-body .title{
+  font-size: 15px;
+  color: #fff;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  background-color: rebeccapurple;
+}
+.allProject-body .projectItem{
+  width: 100%;
+  display: flex;
+}
+.allProject-body .projectItem  image{
+  width: 110px;
+  height: 110px;
+  margin: 10px;
+}
+
+.allProject-body .projectItem .content{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.allProject-body .projectItem .content .name{
+  font-size: 15px;
+}
+.allProject-body .projectItem .content .message{
+  font-size: 13px;
+  color: gray;
+  margin-top: 5px;
+}

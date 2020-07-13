@@ -1,0 +1,23 @@
+<view>
+    <view class="userinfo">
+        <view class="userinfo-avatar">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <open-data class="userinfo-name" type="userNickName"></open-data>
+    </view>
+    <navigator class="item" url="../mycircle/mycircle" hover-class="navigator-hover">
+      <view class='user-item'>
+        <text>我创建的圈子</text>
+      </view>
+    </navigator>
+    <navigator class="item" url="../myjoincircle/myjoincircle" hover-class="navigator-hover">
+      <view class='user-item'>
+        <text>我加入的圈子</text>
+      </view>
+    </navigator>
+    <navigator class="item" url="../mytopic/mytopic" hover-class="navigator-hover">
+      <view class='user-item'>
+        <text>我发布的主题</text>
+      </view>
+    </navigator>
+</view>

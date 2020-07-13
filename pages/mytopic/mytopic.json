@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "我发布的主题",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

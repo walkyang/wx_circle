@@ -1,0 +1,14 @@
+{
+  "name": "收到啦",
+  "version": "1.0.0",
+  "description": "一个信息通知类小程序",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wish_yang",
+  "license": "ISC",
+  "dependencies": {
+    "regenerator": "^0.14.4"
+  }
+}

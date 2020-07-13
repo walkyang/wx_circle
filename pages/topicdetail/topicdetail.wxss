@@ -1,0 +1,135 @@
+
+.item-content{
+  background: #FFFFFF;
+  border: 0 solid rgba(0,0,0,0.1);
+  border-radius: 4px;
+  margin: 14rpx 30rpx 0;
+  box-sizing: border-box;
+  font-family: PingFangSC-Medium;
+  font-size: 14px;
+  color: #7a7878;
+  /* display: flex; */
+  align-items: center;
+  height: auto;
+}
+.item-content img{
+border: 0;
+}
+
+.item-content view{
+margin: 16rpx;
+}
+
+.item-content .item-circle-img{
+width: 60rpx;
+height: 60rpx;
+margin-top: 15rpx;
+}
+.item-content .item-title{
+display: flex;
+flex-direction: row;
+margin-left: 10px;
+margin-bottom: 0rpx;
+}
+.item-content .item-title-lable{
+width: 250px;
+display: flex;
+flex-direction: column;
+margin-top:5px;
+}
+
+.item-name{
+font-size: 27rpx;
+ word-break:break-all;
+ color: #7a7878
+}
+
+.item-content .item-img1{
+width: 98%;
+height: 250rpx;
+margin: 5rpx;
+}
+
+.item-content .item-img2{
+width: 48%;
+height:250rpx;
+margin: 5rpx;
+}
+.item-content .item-img3{
+width: 31%;
+height: 250rpx;
+margin: 5rpx;
+}
+
+.item-content .item-file{
+display: flex;
+flex-direction: row;
+margin-left: 10px;
+margin-bottom: 0rpx;
+border: 1px solid rgb(169, 170, 175) ;
+background-color: #fdfdfa;
+}
+
+.item-file .item-file-lable{
+display: flex;
+flex-direction: column;
+margin-top:5px;
+}
+
+.item-file .item-file-icon{
+width: 60rpx;
+height: 60rpx;
+}
+
+.add-topic {
+position:fixed;
+bottom:0;
+display:flex;
+width:100%;
+justify-content:left;
+margin-left: 5px;
+}
+
+.add-topic image {
+width:40px;
+height:40px;
+}
+
+.item-read{
+padding: 0rpx 20rpx 14rpx;
+/* width: 100%;*/
+height: 60rpx; 
+display: flex;
+}
+.item-read .read-num{
+flex: 1;
+height: 100%;
+}
+.item-read .btn-read{
+width: 60rpx;
+height: 60rpx;
+
+}
+.item-read .btn-read image{
+width: 100%;
+height: 100%;
+}
+
+.item-bottom{
+  padding: 20rpx 20rpx 14rpx;
+/* width: 100%;*/
+height: 60rpx; 
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+}
+.item-bottom navigator{
+  flex: 1;
+}
+
+.item-bottom .noread_list{
+  text-align: right;
+}
+.navigator-hover {
+  color: #1296db;
+}

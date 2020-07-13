@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "已读列表",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

@@ -1,0 +1,37 @@
+<!-- 顶部搜索 -->
+<view class="circle-search-bar">
+      <view class="circle-search-bar__form">
+          <view class="circle-search-bar__box">
+              <icon class="circle-icon-search_in-box" type="search" size="14"></icon>
+              <input type="text" class="circle-search-bar__input" placeholder="请输入圈子名称"/>
+          </view>
+      </view>
+      <view class="circle-search-bar__cancel-btn" bindtap="search_circle" >搜索</view>
+  </view>
+<!-- 中间列表 -->
+<view class="item-circle-list">
+  <navigator url="../circledetail/circledetail?id={{item.circle_id}}" class="item-circle" wx:for="{{circleList}}" wx:key="circle_id">
+    <view>
+      <image src="{{item.circle_img}}" class="item-circle-img"></image>
+    </view>
+    <view class="item-circle-info">
+      <view class="item-circle-name">{{item.circle_name}}（{{item.circle_user_cnt}}人）</view>
+      <view class="item-circle-des">{{item.circle_des}}</view>
+      <view class="item-circle-bottom"><text class="item-circle-time">{{item.user_remarks_name}}在{{item.created_time}} 创建 </text></view>
+      <view class="item-circle-btn">
+      <block wx:if="{{item.is_join == 'Y'}}">
+      <button class="btn-circle-join" type="default" size="mini">已加入</button>
+      <!-- <button class="btn-circle-setting" type="primary" size="mini">设置</button> -->
+      </block>
+      <block wx:else>
+      <button class="btn-circle-join" type="primary" size="mini" data-id="{{item.circle_id}}" data-index="{{index}}" catchtap="btn_join_circle">加入</button>
+      </block>
+      </view>
+    </view>
+  </navigator>
+</view>
+
+<!-- 底部添加 -->
+<view class="add-circle" hover-class="plus-hover" bindtap="nav_addcircle">
+  <image src="../../img/btn_add_circle.png"></image>
+</view>

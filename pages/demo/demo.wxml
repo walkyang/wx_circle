@@ -1,0 +1,12 @@
+<view class='allProject-body'>
+    <view class='title'>所有项目</view>
+    <block wx:for="{{allProjects}}" wx:key="*this">
+      <view class='projectItem'>
+        <image src='{{item.url}}' mode='center'></image>
+        <view class='content'>
+          <view class='name'>{{item.name}}</view>
+          <view class='message'>{{item.message}}</view>
+        </view>
+      </view>
+    </block>
+  </view>

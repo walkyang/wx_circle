@@ -1,0 +1,47 @@
+<form class="content" bindsubmit="formSubmit">
+<view class="container">
+   <picker model="selector" bindchange="circlePickerChange" value="{{circleIndex}}" range="{{circleArr}}" range-key="name">
+      <view  class="lineHeight">
+        选择圈子：{{circleArr[circleIndex].name}}
+      </view>
+   </picker>
+  
+  <view class="lineHeight">
+      <textarea class='input-20' name="content" type='text' placeholder='信息内容'></textarea>
+  </view>
+  <view class="lineHeight" type="text">选择图片
+     <!-- 循环的图片 -->
+     <!-- 上传的图片 限制9张 -->
+     <view >
+     <block wx:for="{{imageList}}" wx:key="*this" >
+        <image data-src="{{item}}" src="{{item}}"  class="topic-img" bindtap="previewImage"> </image>
+     </block>
+     <block wx:if="{{!hideImage}}">
+     <image src="../../img/add_img.png" class="topic-img" bindtap="chooseImage" > </image>
+     </block>
+     </view>
+  </view>
+  <view class="lineHeight" type="text">
+   <block wx:for="{{filePathList}}" wx:item="item" wx:index="index" wx:key="*this" >
+   <view class="item-file">
+      <block wx:if="{{fileExtensionList[index] == 'txt'}}">
+         <image class="item-file-icon" src="../../img/txt.png"></image>
+      </block>
+      <block wx:elif="{{fileExtensionList[index] == 'doc' || fileExtensionList[index] == 'docx'}}">
+         <image class="item-file-icon" src="../../img/word.png"></image>
+      </block>
+      <block wx:elif="{{fileExtensionList[index] == 'pdf'}}">
+         <image class="item-file-icon" src="../../img/pdf.png"></image>
+      </block>
+      <block wx:else>
+         <image class="item-file-icon" src="../../img/excel.png"></image>
+      </block>
+      <view class="item-file-lable" data-url="{{item}}" >{{fileNameList[index]}}</view>
+    </view>
+    </block>
+   选择文件<image src="../../img/add_file.png"  class="topic-file" bindtap="chooseFile"> </image>
+   <!-- 循环的文件 -->
+  </view>
+ <button class="topic-btn-save" form-type="submit" type='primary'>保存</button> 
+</view>
+</form>

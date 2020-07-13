@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "圈子人员",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

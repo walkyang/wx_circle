@@ -1,0 +1,7 @@
+<view wx:for="{{readList}}" wx:key="*this">
+  <view class="item">
+    <image class="item-img" src="{{item.wx_photo}}"></image>
+    <text  class="item-name">{{item.user_remarks_name}}</text>
+    <text  class="item-time"></text>
+  </view>
+</view>

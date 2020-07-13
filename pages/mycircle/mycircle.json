@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "我创建的圈子",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

@@ -1,0 +1,49 @@
+.container {
+  padding: 0;
+  align-items: left;
+}
+.lineHeight {
+  width: 100%;
+  line-height: 80rpx;
+  border-bottom: 1px solid #ccc;
+  font-size: 30rpx;
+  background-color: #fff;
+  padding-left: 30rpx;
+  padding-top:30rpx;
+}
+.topic-img{
+  width: 31%;
+  height: 250rpx;
+  margin: 5rpx;
+  border: 1px solid #ccc;
+}
+.topic-file{
+  width: 30px ;
+  height: 30px;
+}
+.item-file{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  margin-bottom: 0rpx;
+  border: 1px solid rgb(169, 170, 175) ;
+  background-color: #fdfdfa;
+}
+
+.item-file .item-file-lable{
+  display: flex;
+  flex-direction: column;
+  margin-top:5px;
+}
+
+.item-file .item-file-icon{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+button {
+  width: 100%;
+  margin-top: 30rpx;
+}

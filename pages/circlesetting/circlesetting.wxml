@@ -1,0 +1,19 @@
+<form class="content" bindsubmit="formSubmit">
+<view class="container">
+  <view class="lineHeight" type="text">用户备注名称
+     <input class='input-7' name="user_remarks_name" placeholder='当前圈子显示名称'></input>
+  </view>
+  <view class="lineHeight" type="text">联系电话
+     <input class='input-7' name="user_mobile" placeholder='联系电话'></input>
+  </view>
+ <view class="lineHeight" type="text">联系QQ
+     <input class='input-7' name="user_qq" placeholder='联系QQ'></input>
+  </view>
+ <view class="lineHeight" type="text">允许通知我
+      <switch checked="{{isPush}}" bindchange="changePush" />
+  </view>
+ 
+ <button class="circle-btn-save" form-type="submit" type='primary'>加入该圈子</button> 
+</view>
+</form>
+ 

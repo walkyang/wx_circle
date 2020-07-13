@@ -1,0 +1,16 @@
+<form class="content" bindsubmit="formSubmit">
+<view class="container">
+   <view class="lineHeight" type="text">圈子名称
+     <input class='input-7' name="circle_name" placeholder='圈子名称'></input>
+  </view>
+  <view class="lineHeight" type="text">圈子图片
+     <view ><image data-src="{{circleImg}}" src="{{circleImg}}"  class="circle-img" bindtap="chooseImage"> </image></view>
+     
+  </view>
+  <view class="lineHeight">圈子描述
+      <textarea class='input-20' name="circle_des" type='text' placeholder='描述圈子的信息'></textarea>
+  </view>
+ <button class="circle-btn-save" form-type="submit" type='primary'>保存</button> 
+</view>
+</form>
+ 

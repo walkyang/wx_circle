@@ -1,0 +1,8 @@
+<view wx:for="{{circleUserList}}" wx:key="*this">
+  <view class="item">
+    <image class="item-img" src="{{item.wx_photo}}"></image>
+    <text  class="item-name">{{isMaster ? item.user_remarks_name : item.wx_nickname}}</text>
+    <text  class="item-time">{{item.created_time}}加入</text>
+    <!-- <block wx:if="{{isMaster}}"><button class="setting" type="primary" size="mini">设置</button></block> -->
+  </view>
+</view>
